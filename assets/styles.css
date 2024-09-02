@@ -1,0 +1,100 @@
+body {
+  background-color: #a0a0a0;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.card-container {
+  width: 100%;
+  max-width: 468px;
+  border: 3px solid #1e1e1f;
+  margin-left: auto;
+  margin-right: auto
+}
+
+.card-header {
+  text-align: center;
+  background-color: #49494b;
+  color: #fff;
+  font-family: 'Mojangles', sans-serif;
+  font-size: 20px;
+  border: 3px solid #5a5b5c;
+  border-color: #707071 #5a5b5c #5a5b5c #707071;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+}
+
+.card-divider {
+  background-color: rgb(49, 50, 51);
+  color: #fff;
+  padding: 24px;
+}
+
+.card-content {
+  background-color: #48494a;
+  border-top: 3px solid #5a5b5c;
+  border-bottom: 3px solid #2a2b2c;
+  border-radius: 0;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 3% 5%;
+  display: block;
+  padding: 32px;
+}
+
+.card-content-button {
+  outline-offset: 0;
+  border-bottom: 4px solid #58585a;
+  outline: 3px solid #1e1e1f;
+  justify-content: center;
+  display: block;
+}
+
+.white-button {
+  color: #000;
+  text-align: center;
+  background-color: #d1d0d4;
+  border: 3px solid #edecee;
+  font-family: 'Mojangles', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  display: block;
+  width: 100%;
+  padding: 10px;
+}
+
+.white-button:hover {
+  background-color: #b4b4b4;
+  border-width: 3px;
+  border-color: #d4d4d4
+}
+
+.white-button:active {
+  background-color: #777777;
+  border-color: #8f8f8f;
+  border-bottom-style: #8f8f8f;
+}
+
+@media screen and (max-width:991px) {
+  .w-container {
+    max-width: 728px
+  }
+}
+
+@media screen and (max-width:479px) {
+  .w-container {
+    max-width: none
+  }
+}
+
+@font-face {
+  font-family: 'Mojangles';
+  font-display: swap;
+  src: url('assets/fonts/Mojangles') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
