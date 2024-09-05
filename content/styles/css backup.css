@@ -1,0 +1,243 @@
+body {
+  background-color: rgb(72, 73, 74);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  image-rendering: pixelated;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.container-navigation {
+  width: 100%;
+  max-width: 1216px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto 0;
+  padding-top: 0;
+}
+
+.navigation-bar {
+  width: 100%;
+  background-color: #e6e8eb;
+  border-bottom: 5px solid #b1b2b5;
+  padding: 0 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.card-container {
+  border: 3px solid #1e1e1f;
+  margin: auto;
+  width: 512px;
+  max-width: 548px;
+}
+
+.card-header {
+  text-align: center;
+  background-color: #49494b;
+  color: #fff;
+  font-family: 'Mojangles', sans-serif;
+  font-size: 18px;
+  border: 3px solid #5a5b5c;
+  border-color: #707071 #5a5b5c #5a5b5c #707071;
+  padding: 16px;
+}
+
+.card-divider {
+  background-color: rgb(49, 50, 51);
+  color: #fff;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 16px;
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: auto;
+  text-rendering: optimizeSpeed;
+  padding: 24px;
+}
+
+.card-content {
+  background-color: #48494a;
+  border-top: 3px solid #5a5b5c;
+  border-bottom: 3px solid #2a2b2c;
+  padding: 28px;
+}
+
+.card-content-white-button {
+  border-bottom: 4px solid #58585a;
+  outline: 3px solid #1e1e1f;
+  display: block;
+  text-align: center;
+}
+
+.card-content-green-button {
+  border-bottom: 4px solid #2a651d;
+  outline: 3px solid #1e1e1f;
+  display: block;
+  text-align: center;
+}
+
+.white-button {
+  color: #000;
+  background-color: #d1d0d4;
+  border: 3px solid #edecee;
+  font-family: 'Mojangles', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  padding: 10px;
+  width: 100%;
+  display: block;
+}
+
+.white-button:hover {
+  background-color: #b4b4b4;
+  border-width: 3px;
+  border-color: #d4d4d4;
+}
+
+.white-button:active {
+  background-color: #777777;
+  border-color: #8f8f8f;
+}
+
+.green-button {
+  color: #fff;
+  text-align: center;
+  background-color: #3c8426;
+  border: 3px solid #629c52;
+  border-color: #629c52 #558d44 #558d44 #629c52;
+  font-family: 'Mojangles', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  padding: 10px;
+  display: block;
+  width: 100%;
+}
+
+.green-button:hover {
+  background-color: #52a535;
+  border-width: 3px;
+  border-color: #75b75d
+}
+
+.green-button:active {
+  background-color: #2a651d;
+  border-color: #548249
+}
+
+.section-link-button {
+  margin: 12px;
+  outline: 3px solid #1e1e1f;
+  display: block;
+  text-align: center;
+}
+
+.grey-button-backup  {
+  color: #fff;
+  text-align: center;
+  background-color: #48484b;
+  border: 3px solid #747574;
+  border-color: #747574 #48484b #48484b #747574;
+  border-bottom: 4px solid #313332;
+  font-family: 'Mojangles', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 12px;
+  display: block;
+  width: 100%;
+}
+
+.grey-button {
+  display: block;
+  background-color: #48484b;
+  border: 3px solid #747574;
+  color: #fff;
+  font-family: 'Mojangles', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  padding: 10px;
+  width: 100%;
+}
+
+.grey-button:hover {
+  background-color: #59585b;
+  border-width: 3px;
+  border-color: #78797a
+}
+
+.grey-button:active {
+  background-color: #313332;
+  border-color: #5b5a5c;
+}
+
+.purple-button {
+  display: block;
+  background-color: #7245e4;
+  border: 3px solid #a165f3;
+  color: #fff;
+  font-family: 'Mojangles', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  padding: 10px;
+  width: 100%;
+}
+
+.purple-button:hover {
+  background-color: #8556f9;
+  border-width: 3px;
+  border-color: #ab6cfc
+}
+
+.purple-button:active {
+  background-color: #5c2dc6;
+  border-color: #9657e2;
+}
+
+.red-button {
+  display: block;
+  background-color: #ca3636;
+  border: 3px solid #db5e5c;
+  color: #fff;
+  font-family: 'Mojangles', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 10px;
+  width: 100%;
+}
+
+.red-button:hover {
+  background-color: #d83333;
+  border-width: 3px;
+  border-color: #e95a5a
+}
+
+.red-button:active {
+  background-color: #c12c2d;
+  border-color: #cd5656;
+}
+
+@media screen and (max-width: 764px) {
+  .card-container {
+    width: 456px;
+  }
+}
+
+@font-face {
+  font-family: 'Mojangles';
+  font-display: swap;
+  src: url('assets/fonts/Mojangles') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
