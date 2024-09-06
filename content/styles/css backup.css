@@ -233,11 +233,3 @@ a {
     width: 456px;
   }
 }
-
-@font-face {
-  font-family: 'Mojangles';
-  font-display: swap;
-  src: url('assets/fonts/Mojangles') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-}
