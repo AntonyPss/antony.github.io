@@ -51,11 +51,13 @@
     </div>
 
     <div id="sliderGallery1" class="slider-gallery">
-        <div class="image-container">
-            <img id="sliderImage" src="https://via.placeholder.com/400x300" alt="Slider Image">
+        <div class="gallery-container">
+            <div class="image-container">
+                <img id="sliderImage" src="https://via.placeholder.com/400x300" alt="Slider Image">
+            </div>
+            <input type="range" id="imageSlider" min="0" max="5" value="0" oninput="updateImage('sliderGallery1')">
+            <button class="close-button" onclick="closeGallery()">Close</button>
         </div>
-        <input type="range" id="imageSlider" min="0" max="5" value="0" oninput="updateImage('sliderGallery1')">
-        <button class="close-button" onclick="closeGallery()">Close</button>
     </div>
 
     <script src="gallery.js"></script>
