@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antony Projects</title>
+    <link rel="stylesheet" href="styles/main-styles.css">
+    <link rel="stylesheet" href="styles/projects-styles.css">
+    <link rel="icon" href="imgs/web_icon.png" type="image/x-icon">
+</head>
+
+<body>
+    <div id="main-content">
+        <div id="navigation-bar-color">
+            <div class="navigation-bar">
+                <h1>Antony Website</h1>
+            </div>
+        </div>
+        <div class="grid-container">
+            <div class="card-container-view">
+                <div class="small-card-divider">
+                    <img class="card-img-header" src="imgs/gui/music-ui.png" alt="Game Menu">
+                    <div class="small-card-header-title">
+                        <h class="card-title">Phonk Music Ui v2.6</h>
+                        <div class="small-card-header-description">Resource Pack Ui</div>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="card-content-button" style="border-bottom: 4px solid #737374;">
+                        <button class="white-button-view" onclick="showSliderGallery('sliderGallery1')">View</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-container-view">
+                <div class="small-card-divider">
+                    <img class="card-img-header" src="imgs/gui/screenshot-1.png" alt="Game Menu">
+                    <div class="small-card-header-title">
+                        <h class="card-title">Thony Ui v1.2.0</h>
+                        <div class="small-card-header-description">Resource Pack Ui</div>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="card-content-button" style="border-bottom: 4px solid #737374;">
+                        <button class="white-button-view" onclick="showSliderGallery('sliderGallery1')">View</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sliderGallery1" class="slider-gallery">
+        <div class="image-container">
+            <img id="sliderImage" src="https://via.placeholder.com/400x300" alt="Slider Image">
+        </div>
+        <input type="range" id="imageSlider" min="0" max="5" value="0" oninput="updateImage('sliderGallery1')">
+        <button class="close-button" onclick="closeGallery()">Close</button>
+    </div>
+
+    <script src="gallery.js"></script>
+</body>
+
+</html>
