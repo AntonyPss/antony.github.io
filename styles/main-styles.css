@@ -1,0 +1,160 @@
+body {
+    background-color: rgb(72, 73, 74);
+    font-family: 'MinecraftRegular', sans-serif;
+    text-rendering: optimizeLegibility;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.card-container {
+    align-items: stretch;
+    border: 3px solid #1e1e1f;
+    width: 512px;
+    max-width: 548px;
+    margin: auto;
+    margin-top: 24px;
+    box-shadow: 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+.card-container:hover {
+    border: 3px solid #121213;
+    transform: translate(-2px, -2px);
+}
+
+.card-header {
+    background-color: #4949494b;
+    border: 3px solid #5a5b5c;
+    border-color: #707071 #5a5b5c #5a5b5c #707071;
+    color: #fff;
+    text-align: center;
+    font-family: 'MinecraftRegular', sans-serif;
+    font-size: 16px;
+    padding: 14px;
+}
+
+.card-divider {
+    background-color: rgb(49, 50, 51);
+    color: #fff;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 16px;
+    padding: 24px;
+    padding-top: 16px;
+}
+
+.card-welcome-header {
+    text-align: center;
+    padding: 24px;
+}
+
+.card-content {
+    background-color: #48494a;
+    border-top: 3px solid #5a5b5c;
+    border-bottom: 3px solid #2a2b2c;
+    padding: 20px;
+}
+
+.card-content-button {
+    display: block;
+    text-align: center;
+    border-bottom: 4px solid #265c16;
+    outline: 3px solid #1e1e1f;
+    margin: 8px;
+}
+
+.common-button {
+    display: block;
+    color: #fff;
+    text-rendering: optimizeLegibility;
+    text-align: center;
+    font-family: 'MinecraftRegular', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    width: 100%;
+    padding: 10px;
+}
+
+.grey-button {
+    background-color: #6363634b;
+    border: 3px solid #747574;
+    border-color: #747574 #575757 #575757 #747574;
+}
+
+.grey-button:hover {
+    background-color: #59585b;
+    border-width: 3px;
+    border-color: #78797a;
+}
+
+.grey-button:active {
+    background-color: #313332;
+    border-color: #5b5a5c;
+}
+
+.purple-button {
+    background-color: #7245e4;
+    border: 3px solid #a165f3;
+    border-color: #a96cff #8e54de #8e54de #a96cff;
+}
+
+.purple-button:hover {
+    background-color: #8556f9;
+    border-width: 3px;
+    border-color: #ab6cfc;
+}
+
+.purple-button:active {
+    background-color: #5c2dc6;
+    border-color: #9657e2;
+}
+
+.red-button {
+    background-color: #ca3636;
+    border: 3px solid #db5e5c;
+    border-color: #db5e5c #e24343 #e24343 #db5e5c;
+}
+
+.red-button:hover {
+    background-color: #d83333;
+    border-width: 3px;
+    border-color: #e95a5a;
+}
+
+.red-button:active {
+    background-color: #c12c2d;
+    border-color: #cd5656;
+}
+
+.green-button {
+    background-color: #3c8426;
+    border: 3px solid #629c52;
+    border-color: #629c52 #538845 #538845 #629c52;
+}
+
+.green-button:hover {
+    background-color: #52a535;
+    border-width: 3px;
+    border-color: #75b75d;
+}
+
+.green-button:active {
+    background-color: #2a651d;
+    border-color: #548249;
+}
+
+@media screen and (max-width: 764px) {
+    .card-container {
+        width: 90%;
+        margin: 12px auto;
+    }
+}
+
+@font-face {
+    font-family: 'MinecraftRegular';
+    font-display: swap;
+    src: url('https://raw.githubusercontent.com/AntonyPss/Portfolio-MC/main/fonts/MojanglesRegular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
