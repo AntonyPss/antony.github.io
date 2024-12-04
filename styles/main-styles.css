@@ -1,7 +1,6 @@
 body {
     background-color: rgb(72, 73, 74);
     font-family: 'MinecraftRegular', sans-serif;
-    text-rendering: optimizeLegibility;
 }
 
 a {
@@ -9,7 +8,7 @@ a {
     color: #fff;
 }
 
-.card-container {
+.card-wrapper {
     align-items: stretch;
     border: 3px solid #1e1e1f;
     width: 512px;
@@ -17,11 +16,6 @@ a {
     margin: auto;
     margin-top: 24px;
     box-shadow: 4px 4px rgba(0, 0, 0, 0.2);
-}
-
-.card-container:hover {
-    border: 3px solid #121213;
-    transform: translate(-2px, -2px);
 }
 
 .card-header {
@@ -56,7 +50,7 @@ a {
     padding: 20px;
 }
 
-.card-content-button {
+.card-button-wrapper {
     display: block;
     text-align: center;
     border-bottom: 4px solid #265c16;
@@ -64,7 +58,7 @@ a {
     margin: 8px;
 }
 
-.common-button {
+.button-common {
     display: block;
     color: #fff;
     text-rendering: optimizeLegibility;
@@ -76,76 +70,76 @@ a {
     padding: 10px;
 }
 
-.grey-button {
+.button-grey {
     background-color: #6363634b;
     border: 3px solid #747574;
     border-color: #747574 #575757 #575757 #747574;
 }
 
-.grey-button:hover {
+.button-grey:hover {
     background-color: #59585b;
     border-width: 3px;
     border-color: #78797a;
 }
 
-.grey-button:active {
+.button-grey:active {
     background-color: #313332;
     border-color: #5b5a5c;
 }
 
-.purple-button {
+.button-purple {
     background-color: #7245e4;
     border: 3px solid #a165f3;
     border-color: #a96cff #8e54de #8e54de #a96cff;
 }
 
-.purple-button:hover {
+.button-purple:hover {
     background-color: #8556f9;
     border-width: 3px;
     border-color: #ab6cfc;
 }
 
-.purple-button:active {
+.button-purple:active {
     background-color: #5c2dc6;
     border-color: #9657e2;
 }
 
-.red-button {
+.button-red {
     background-color: #ca3636;
     border: 3px solid #db5e5c;
     border-color: #db5e5c #e24343 #e24343 #db5e5c;
 }
 
-.red-button:hover {
+.button-red:hover {
     background-color: #d83333;
     border-width: 3px;
     border-color: #e95a5a;
 }
 
-.red-button:active {
+.button-red:active {
     background-color: #c12c2d;
     border-color: #cd5656;
 }
 
-.green-button {
+.button-green {
     background-color: #3c8426;
     border: 3px solid #629c52;
     border-color: #629c52 #538845 #538845 #629c52;
 }
 
-.green-button:hover {
+.button-green:hover {
     background-color: #52a535;
     border-width: 3px;
     border-color: #75b75d;
 }
 
-.green-button:active {
+.button-green:active {
     background-color: #2a651d;
     border-color: #548249;
 }
 
 @media screen and (max-width: 764px) {
-    .card-container {
+    .card-wrapper {
         width: 90%;
         margin: 12px auto;
     }

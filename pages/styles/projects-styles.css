@@ -8,7 +8,7 @@ body {
     box-sizing: border-box;
 }
 
-.navigation-bar {
+.navbar {
     width: 100%;
     height: 64px;
     background-color: #e6e8eb;
@@ -16,29 +16,39 @@ body {
     padding: 20px;
 }
 
-#navigation-bar-color {
+#navbar-wrapper {
     text-align: center;
     border-bottom: 3px solid #242424;
 }
 
-.navigation-bar h1 {
+.navbar p {
     font-size: 24px;
     color: #252525;
     font-family: 'MinecraftRegular', sans-serif;
 }
 
-.navigation-bar a {
+.navbar a {
     font-size: 16px;
     margin-left: 10px;
 }
 
-.card-img-header {
+.card-wrapper {
+    align-items: stretch;
+    border: 3px solid #1e1e1f;
+    width: 512px;
+    max-width: 548px;
+    margin: auto;
+    margin-top: 24px;
+    box-shadow: 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+.card-image {
     width: 100%;
     height: auto;
     object-fit: cover;
 }
 
-.grid-container {
+.grid-wrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 24px;
@@ -48,7 +58,7 @@ body {
     justify-content: center;
 }
 
-.card-container-view {
+.card-wrapper {
     display: flex;
     flex-direction: column;
     background-color: #48494a;
@@ -60,11 +70,11 @@ body {
     margin: 0 auto;
 }
 
-.card-container-view:hover {
+.card-wrapper:hover {
     transform: translate(-2px, -2px);
 }
 
-.small-card-divider {
+.card-divider {
     background-color: #48494a;
     border-bottom: 3px solid #2a2b2c;
     color: #fff;
@@ -80,7 +90,7 @@ body {
     padding-bottom: 6px;
 }
 
-.small-card-header-title {
+.card-header {
     display: flex;
     flex-direction: column;
     padding-left: 22px;
@@ -89,14 +99,31 @@ body {
     padding-bottom: 16px;
 }
 
-.small-card-header-description {
+.card-description {
     text-align: left;
     background-color: rgba(0, 0, 0, 0.32);
     padding: 4px 6px;
     margin-bottom: 10px;
+    display: flex;
+    width: fit-content;
 }
 
-.white-button-view {
+.card-content {
+    background-color: #48494a;
+    border-top: 3px solid #5a5b5c;
+    border-bottom: 3px solid #2a2b2c;
+    padding: 20px;
+}
+
+.card-button-wrapper {
+    display: block;
+    text-align: center;
+    border-bottom: 4px solid #265c16;
+    outline: 3px solid #1e1e1f;
+    margin: 8px;
+}
+
+.button-view {
     color: #252525;
     background-color: #d1d0d4;
     border: 3px solid #edecee;
@@ -108,13 +135,13 @@ body {
     display: block;
 }
 
-.white-button-view:hover {
+.button-view:hover {
     background-color: #b4b4b4;
     border-width: 3px;
     border-color: #d4d4d4;
 }
 
-.white-button-view:active {
+.button-view:active {
     background-color: #8d8d8d;
     border-color: #b6b6b6;
 }
@@ -127,7 +154,7 @@ body {
     text-align: center;
 }
 
-.image-container img {
+.image-wrapper img {
     width: 100%;
     max-width: 600px;
     height: auto;
@@ -138,7 +165,7 @@ body {
     margin-top: 20px;
 }
 
-.close-button {
+.button-close {
     display: block;
     margin: 20px auto;
     padding: 10px 20px;
@@ -149,37 +176,68 @@ body {
     cursor: pointer;
 }
 
-.close-button:hover {
+.button-close:hover {
     background-color: #b4b4b4;
 }
 
+footer {
+    text-align: center;
+    border-top: #1e1e1f solid 3px;
+    height: 28px;
+}
+
+.footer-content {
+    background-color: #494949;
+    border-top: 3px solid #5a5b5c;
+    padding: 10px;
+}
+
+.footer-link {
+    color: #fff;
+    font-family: "MinecraftRegular", sans-serif;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+
 @media screen and (max-width: 768px) {
-    .grid-container {
+    .grid-wrapper {
         grid-template-columns: 1fr;
     }
 
-    .card-container-view {
+    .card-wrapper {
         min-width: 100%;
         max-width: 100%;
     }
 
-    .navigation-bar h1 {
+    .navbar p {
         font-size: 20px;
     }
 
-    .navigation-bar a {
+    .navbar a {
         font-size: 16px;
     }
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
-    .grid-container {
+    .grid-wrapper {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media screen and (min-width: 1025px) {
-    .grid-container {
+    .grid-wrapper {
         grid-template-columns: repeat(2, 1fr);
     }
+}
+
+@font-face {
+    font-family: 'MinecraftRegular';
+    font-display: swap;
+    src: url('https://raw.githubusercontent.com/AntonyPss/Portfolio-MC/main/fonts/MojanglesRegular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
 }
