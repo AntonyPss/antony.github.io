@@ -1,8 +1,20 @@
 body {
     background-color: rgb(72, 73, 74);
     font-family: 'MinecraftSeven', sans-serif;
-    font-size: 14px;
-    border: 3px solid rgb(30, 30, 31);
+    color: #fff;
+    word-wrap: break-word;
+    word-spacing: 2px;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+header, main {
+    position: relative;
+    z-index: 4;
 }
 
 * {
@@ -13,82 +25,197 @@ body {
 
 header {
     display: flex;
-    border-top: 3px solid rgb(30, 30, 31);
-    border-bottom: 3px solid rgb(30, 30, 31);
-    padding: 20px;
-    background-color: rgb(246, 249, 250);
     position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    height: 64px;
+    background-color: rgb(256, 249, 250);
+    border-bottom: 3px solid rgb(30, 30, 31);
     align-items: center;
     justify-content: center;
+    top: 0;
+    margin: 0;
+    padding: 16px;
     box-sizing: border-box;
+    z-index: 1000;
+    width: 100%;
 }
 
 header h1 {
     font-family: 'MinecraftTen', sans-serif;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     color: #222;
-    margin: 0;
 }
 
 main {
-    position: relative;
+    border: 3px solid rgb(30, 30, 31);
+    margin: 2.5cm 4cm 0 4cm;
+}
+
+.presentation-panel {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.presentation-nav {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 10px;
+    justify-content: stretch;
+}
+
+.presentation-nav button {
+    width: 100%;
+}
+
+.preview-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+.preview-grid-item {
+    background-color: rgb(49, 50, 51);
+    border: 3px solid rgb(30, 30, 31);
     overflow: hidden;
+    box-sizing: border-box;
+}
+
+.preview-grid-item img {
+    display: block;
     border-bottom: 3px solid rgb(30, 30, 31);
-}
-
-main .presentation-panel {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    height: 400px;
-    max-height: 500px;
-}
-
-main .presentation-panel img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
     object-fit: cover;
-    filter: blur(2px);
-    z-index: -1;
+    width: 100%;
+    height: auto;
 }
 
-main .presentation-content {
+.preview-grid-item .divider-panel {
+    border-top: none;
+    padding: 12px 0 14px 12px;
+}
+
+.preview-grid-item .divider-panel #previewTitle {
+    font-size: 1.2rem;
+}
+
+.preview-grid-item .divider-panel #previewMessage {
+    display: inline-block;
+    background-color: #222;
+    font-size: 1.2rem;
+    padding: 4px;
+    margin: 0;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+    box-sizing: border-box;
+    max-width: 100%;
+    padding-top: 10px;
+}
+
+.team-grid-item {
     display: flex;
     flex-direction: column;
-    position: absolute;
-    top: 36%;
-    left: 5%;
+    position: relative;
+    background-color: rgb(49, 50, 51);
+    border: 3px solid rgb(30, 30, 31);
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.team-grid-content {
+    display: flex;
     gap: 10px;
-    color: #fff;
-    z-index: 8;
 }
 
-main .presentation-content h2 {
-    font-family: 'MinecraftTen', sans-serif;
-    font-size: 2.5rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+.team-grid-content img {
+    background-color: rgb(49, 50, 51);
+    border: 3px solid rgb(30, 30, 31);
+    overflow: hidden;
+    width: 64px;
+    height: 64px;
 }
 
-main .presentation-content p {
-    font-family: 'MinecraftSeven', sans-serif;
-    font-size: 1.2rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+.team-grid-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+}
+
+.team-grid-header h3 {
+    font-size: 1.4rem;
+    font-weight: 200;
+}
+
+.team-grid-header p {
+    font-size: 1rem;
+    font-weight: 200;
+}
+
+.team-grid-button {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.team-grid-button a {
+    text-decoration: none;
+}
+
+.team-grid-button button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.team-grid-button button img {
+    margin: 0 8px 4px 0;
+    width: 20px;
+    height: 20px;
+}
+
+.team-grid-button .github-button {
     width: 100%;
-    max-width: 60%;
 }
 
-main .presentation-button {
-    margin-top: 10px;
-    z-index: 8;
+.team-grid-button .discord-button {
+    width: 55px;
 }
 
-main .presentation-button button {
-    width: 250px;
+.team-grid-button .discord-button svg {
+    align-items: center;
+    color: #222;
+    width: 24px;
+    height: 24px;
+}
+
+.team-grid-button .youtube-button {
+    width: 55px;
+}
+
+.team-grid-button .youtube-button svg {
+    color: #222;
+    width: 24px;
+    height: 24px;
+}
+
+footer {
+    text-align: center;
+}
+
+.bottom-padding {
+    padding: 20px;
+}
+
+.dark-border {
+    position: absolute;
+    background-color: rgb(177, 178, 181);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 6px;
 }
 
 .divider-panel {
@@ -97,124 +224,86 @@ main .presentation-button button {
     border-bottom: 3px solid rgb(51, 51, 52);
     border-top: 3px solid rgb(92, 93, 94);
     padding: 10px 20px;
-    color: white;
-    gap: 10px;
 }
 
 .divider-panel h2 {
     font-family: 'MinecraftTen', sans-serif;
     font-size: 1.8rem;
+    margin: 2px 0 4px 0;
 }
 
 .divider-panel p {
     font-family: 'MinecraftSeven', sans-serif;
     font-size: 1.2rem;
+    margin: 2px 0 4px 0;
 }
 
 .divider-panel ul {
+    list-style-type: none;
     font-family: 'MinecraftSeven', sans-serif;
     font-size: 1.2rem;
-    list-style: none;
+    margin: 2px 0 4px 0;
 }
 
-.section-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
-    gap: 20px;
-    box-sizing: border-box;
-    max-width: 100%;
-    margin-top: 12px;
+.divider-panel ul li {
+    margin: 0 0 8px 0;
 }
 
-.section-grid-item {
-    justify-content: center;
-    border: 3px solid rgb(30, 30, 31);
-    overflow: hidden;
-    background-color: rgb(49, 50, 51);
-    max-width: 100%;
-    box-sizing: border-box;
+#paragraphGrey {
+    color: rgb(197, 197, 197);
 }
 
-.section-grid-item img {
-    max-width: 100%;
-    object-fit: cover;
-    border-bottom: 3px solid rgb(30, 30, 31);
-    height: auto;
-    display: block;
+.background-image {
+    position: absolute;
+    background-image: url('../images/presentation.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    width: 100%;
+    height: 100%;
 }
 
-.section-grid-item p {
-    margin: 0;
-    font-size: 1rem;
-}
-
-.section-grid-item::after {
-    content: '';
-    display: block;
-    height: 32px;
-    background-color: rgb(72, 73, 74);
-    transition: background-color 0.1s ease;
-    margin-bottom: 6px;
-}
-
-.section-grid-item:hover::after {
-    background-color: rgb(88, 88, 90);
-}
-
-.section-grid-item:hover {
-    right: 3px;
-    bottom: 3px;
-    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
-}
-
-footer {
-    text-align: center;
-}
-
-footer p {
-    padding: 20px;
-}
-
-/* Buttons Styles */
+/* Common Styles */
 
 button {
-    font-family: 'MinecraftSeven', sans-serif;
     position: relative;
-    display: inline-block;
-    min-height: 50px;
     background-color: rgb(88, 88, 90);
-    border: 3px rgb(30, 30, 32) solid;
-    cursor: pointer;
-    overflow: hidden;
+    border: 3px solid rgb(30, 30, 31);
     text-align: center;
-    word-wrap: break-word;
-    color: black;
-    z-index: 3;
-    transition: top 0.05s, background-color 0.05s;
-    font-size: 16px;
+    font-family: 'MinecraftSeven', sans-serif;
+    font-weight: 200;
+    font-size: 18px;
+    color: #222;
+    margin: 14px 0 0 0;
     padding: 0 10px;
+    z-index: 4;
+    overflow: hidden;
+    min-height: 55px;
+}
+
+button:hover::before {
+    background-color: rgb(162, 162, 162);
+    border-color: rgb(241, 242, 244);
 }
 
 button::before {
     content: '';
     position: absolute;
+    background-color: rgb(198, 198, 198);
+    border: 3px solid rgb(236, 237, 239);
     top: 0;
     left: 0;
     right: 0;
     bottom: 5px;
-    border: 3px solid rgb(236, 237, 239);
-    background-color: rgb(198, 198, 198);
-    transition: bottom 0.05s;
     z-index: -1;
 }
 
-button:hover::before {
-    background-color: rgb(162, 162, 162);
-    border-color: rgb(241, 242, 244)
-}
-
 button:active {
-    top: 6px;
+    top: 2px;
     height: 44px;
 }
 
@@ -222,27 +311,48 @@ button:active::before {
     bottom: 0;
 }
 
-.dark-border {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 6px;
-    background-color: rgb(177, 178, 181);
-}
-
 @font-face {
     font-family: 'MinecraftSeven';
-    src: url('https://raw.githubusercontent.com/AntonyPss/AntonyPss-Web/main/fonts/MinecraftSeven.ttf') format('truetype');
+    src: url('../fonts/MinecraftSeven.ttf') format('truetype');
     font-display: swap;
-    font-weight: 400;
+    font-weight: 200;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'MinecraftTen';
-    src: url('https://raw.githubusercontent.com/AntonyPss/AntonyPss-Web/main/fonts/MinecraftTen.otf') format('opentype');
+    src: url('../fonts/MinecraftTen.otf') format('opentype');
     font-display: swap;
-    font-weight: bold;
+    font-weight: 700;
     font-style: normal;
+}
+
+@media screen and (max-width: 760px) {
+    main {
+        margin: 2.2cm 0.4cm 0 0.4cm;
+    }
+
+    .presentation-panel {
+        font-size: 2rem;
+    }
+
+    .presentation-nav button {
+        width: 100%;
+    }
+
+    .divider-panel h2 {
+        font-size: 1.6rem;
+    }
+
+    .divider-panel p {
+        font-size: 1rem;
+    }
+
+    .divider-panel ul {
+        font-size: 1rem;
+    }
+
+    .divider-panel ul li {
+        font-size: 1rem;
+    }
 }
