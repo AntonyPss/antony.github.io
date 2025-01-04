@@ -1,0 +1,507 @@
+body {
+    background-color: rgb(56, 56, 56);
+    font-family: 'MinecraftSeven', sans-serif;
+    color: #fff;
+    word-wrap: break-word;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+header, main {
+    position: relative;
+    z-index: 4;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.main-content {
+    border: 3px solid rgb(30, 30, 32);
+}
+
+header {
+    display: flex;
+    position: fixed;
+    background-color: rgb(256, 249, 250);
+    border-bottom: 3px solid rgb(30, 30, 32);
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    margin: 0;
+    padding: 16px;
+    box-sizing: border-box;
+    z-index: 1000;
+    width: 100%;
+}
+
+header h1 {
+    font-family: 'MinecraftTen', sans-serif;
+    font-size: 1.6rem;
+    color: #222;
+}
+
+main {
+    margin: 2.5cm 1cm 0 1cm;
+}
+
+/** Header Navigation */
+
+.header-nav {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(33%, 1fr));
+    justify-content: center;
+    margin: 0 0 16px 0;
+}
+
+.header-nav a {
+    text-decoration: none;
+}
+
+.header-nav button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.header-nav button img {
+    width: 24px;
+    height: 24px;
+    margin: 0 8px 0 0;
+}
+
+.header-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+/** Presentation Panel */
+
+.presentation-panel {
+    width: auto;
+}
+
+.presentation-panel button {
+    margin: 10px 0;
+    width: 360px;
+    max-width: 100%;
+}
+
+.presentation-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 20px 0;
+}
+
+.presentation-image img {
+    width: 448;
+    height: 192px;
+}
+
+/** Presentation Navigation */
+
+.preview-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+    grid-gap: 20px;
+    box-sizing: border-box;
+    margin: 20px 1cm 0 1cm;
+}
+
+.preview-grid-item {
+    position: relative; /* Agregar esta línea */
+    background-color: rgb(49, 50, 51);
+    border: 3px solid rgb(30, 30, 32);
+    overflow: hidden;
+    box-sizing: border-box;
+    transition: transform 0.4s ease, box-shadow 0.4s ease; /* Agregar esta línea */
+}
+
+.preview-grid-item img {
+    display: block;
+    border-bottom: 3px solid rgb(30, 30, 31);
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+}
+
+.preview-grid-item .divider-panel {
+    border-top: none;
+    padding: 12px 0 14px 12px;
+}
+
+.preview-grid-item .divider-panel #previewTitle {
+    font-size: 1.2rem;
+}
+
+.preview-grid-item .divider-panel #previewMessage {
+    display: inline-block;
+    background-color: #222;
+    font-size: 1.2rem;
+    padding: 4px;
+    margin: 0;
+}
+
+.preview-grid-item:hover {
+    transform: translate(-2px, -2px) scale(1.02) rotate(2deg);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+}
+
+.preview-grid-item:active {
+    transform: translate(0, 0) scale(1) rotate(0deg);
+}
+
+/* Team Grid */
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+    grid-gap: 20px;
+    box-sizing: border-box;
+    margin: 20px 0 0 0;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+}
+
+.team-grid-item {
+    background-color: rgb(49, 50, 51);
+    border: 3px solid rgb(30, 30, 32);
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.team-grid-header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.team-grid-content {
+    display: flex;
+    background-color: #48494A;
+    border-top: 3px solid #5A5B5C;
+    border-left: 3px solid #5A5B5C;
+    border-right: 3px solid #323334;
+    border-bottom: 3px solid #323334;
+    padding: 12px;
+    width: 100%;
+}
+
+.team-user img {
+    border: 3px solid rgb(30, 30, 32);
+    width: 84px;
+    height: 84px;
+}
+
+.team-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    margin: 0 0 0 12px;
+}
+
+.team-info #userTag {
+    display: inline-block;
+    background-color: #222;
+    font-size: 1.2rem;
+    padding: 4px;
+    margin: 0;
+}
+
+.team-info #userName, #userTag {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.team-button {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 3px solid #5A5B5C;
+    border-left: 3px solid #323234;
+    border-right: 3px solid #323334;
+    border-bottom: 3px solid #323334;
+    width: 116px;
+    height: 116px;
+}
+
+.team-button a {
+    border-left: 3px solid #5A5B5C;
+    text-decoration: none;
+    width: 116px;
+    height: 116px;
+}
+
+.team-button img {
+    position: relative;
+    width: 84px;
+    height: 84px;
+}
+
+/* Social Media */
+
+.social-media-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(32%, 1fr));
+    grid-gap: 20px;
+    box-sizing: border-box;
+    margin: 20px 0 0 0;
+}
+
+.social-media-grid button {
+    width: 100%;
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+}
+
+/* White Button */
+
+.normal-button {
+    background-color: rgb(88, 88, 90);
+    border: 3px solid rgb(30, 30, 32);
+    color: #222;
+}
+
+.normal-button:hover::before {
+    background-color: rgb(162, 162, 162);
+    border-color: rgb(241, 242, 244)
+}
+
+.normal-button::before {
+    border: 3px solid rgb(236, 237, 239); 
+    background-color: rgb(198, 198, 198); 
+}
+
+/* Dark Button */
+
+.dark-button {
+    background-color: rgb(49, 50, 51);
+    border: 3px solid rgb(30, 30, 32);
+    color: #fff;
+}
+
+.dark-button:hover::before {
+    border-color: rgb(150, 150, 151);
+    background-color: rgb(67, 68, 68);
+}
+
+.dark-button::before {
+    border: 3px solid rgb(109, 109, 110); 
+    background-color: rgb(72, 73, 74); 
+}
+
+/* Purple Button */
+
+.purple-button {
+    background-color: #4A1CAC;
+    border: 3px solid rgb(30, 30, 32);
+    color: #fff;
+}
+
+.purple-button:hover::before {
+    border-color: #b175ff;
+    background-color: #7e50f4;
+}
+
+.purple-button::before {
+    border: 3px solid #A164F2; 
+    background-color: #7345E5; 
+}
+
+/* Red Button */
+
+.red-button {
+    background-color: #991E1E;
+    border: 3px solid rgb(30, 30, 32);
+    color: #fff;
+}
+
+.red-button:hover::before {
+    border-color: #D55E5E;
+    background-color: #CA3636;
+}
+
+.red-button::before {
+    border: 3px solid #D55E5E; 
+    background-color: #CA3636; 
+}
+
+/* Common Button */
+
+button {
+    position: relative;
+    text-align: center;
+    font-family: 'MinecraftSeven', sans-serif;
+    font-weight: 200;
+    font-size: 1.4rem;
+    padding: 0 10px;
+    z-index: 4;
+    overflow: hidden;
+    cursor: pointer;
+    min-height: 65px;
+    transition: bottom 0.2s ease;
+}
+
+button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 4px;
+    z-index: -1;
+    transition: bottom 0.2s ease;
+}
+
+button:active::before {
+    bottom: 0;
+}
+
+/* Common */
+
+.bottom-padding {
+    padding: 20px;
+}
+
+.dark-border {
+    position: absolute;
+    background-color: rgb(177, 178, 181);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 6px;
+}
+
+.divider-panel {
+    background-color: rgb(72, 73, 74);
+    border-bottom: 3px solid rgb(51, 51, 52);
+    border-top: 3px solid rgb(92, 93, 94);
+    padding: 1rem 2rem;
+}
+
+.divider-panel h2 {
+    font-family: 'MinecraftTen', sans-serif;
+    font-size: 3rem;
+    margin: 2px 0 4px 0;
+}
+
+.divider-panel p {
+    font-family: 'MinecraftSeven', sans-serif;
+    font-size: 1.5rem;
+    margin: 2px 0 4px 0;
+}
+
+.divider-panel ul {
+    list-style-type: none;
+    font-family: 'MinecraftSeven', sans-serif;
+    font-size: 1.5rem;
+    margin: 2px 0 4px 0;
+}
+
+.divider-panel ul li {
+    margin: 0 0 8px 0;
+}
+
+#paragraphGrey {
+    color: rgb(197, 197, 197);
+}
+
+.background-image {
+    position: absolute;
+    background-image: url('../assets/images/background_overlay.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    width: 100%;
+    height: 100%;
+}
+
+
+@font-face {
+    font-family: 'MinecraftSeven';
+    src: url('../assets/fonts/MinecraftSeven.ttf') format('truetype');
+    font-display: swap;
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MinecraftTen';
+    src: url('../assets/fonts/MinecraftTen.otf') format('opentype');
+    font-display: swap;
+    font-weight: 700;
+    font-style: normal;
+}
+
+@media screen and (max-width: 760px) {
+    main {
+        margin: 2.2cm 0.4cm 0 0.4cm;
+    }
+
+    .presentation-panel {
+        font-size: 2rem;
+    }
+
+    .presentation-image img {
+        width: 100%;
+        height: auto;
+    }
+
+    .presentation-nav button {
+        width: 100%;
+    }
+
+    .header-row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #userTag {
+        text-align: center;
+    }
+
+    .social-media-grid {
+        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+    }
+
+    .divider-panel h2 {
+        font-size: 1.4rem;
+    }
+
+    .divider-panel p {
+        font-size: 1.2rem;
+    }
+
+    .divider-panel ul {
+        font-size: 1.2rem;
+    }
+
+    button {
+        font-size: 1.2rem;
+        min-height: 55px;
+    }
+
+    .bottom-padding {
+        padding: 10px;
+    }
+}
